@@ -1,0 +1,41 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.env/
+.venv/
+venv/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Logs and databases
+*.log
+db.sqlite3
+
+# Unit test / coverage reports
+.coverage
+.tox/
+.nox/
+htmlcov/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE configurations
+.vscode/
+.idea/
+
+# PyInstaller
+*.spec
+
+# Mypy type checker
+.mypy_cache/
+
+# Pyre type checker
+.pyre/
