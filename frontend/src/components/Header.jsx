@@ -12,8 +12,13 @@ const Header = () => {
             <Nav className="ml-auto">
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#products">Products</Nav.Link>
-              <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link href="/cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+              </Nav.Link>
+              <Nav.Link href="/login">
+                <i class="fa-solid fa-user"></i>Login
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
