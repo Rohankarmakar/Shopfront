@@ -63,6 +63,7 @@ const Rating = ({ value, text, color }) => {
           }
         ></i>
       </span>
+      <span>{text && text}</span>
     </div>
   );
 };
