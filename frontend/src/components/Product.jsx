@@ -31,7 +31,7 @@ const Product = ({ product }) => {
 
       <Card.Footer className="text-center">
         <button className="btn btn-primary my-3 mx-auto rounded">
-          <i class="fa-solid fa-cart-plus"> Add to Cart </i>
+          <i className="fa-solid fa-cart-plus"> Add to Cart </i>
         </button>
       </Card.Footer>
     </Card>

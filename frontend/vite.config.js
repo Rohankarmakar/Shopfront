@@ -7,4 +7,23 @@ export default defineConfig({
   build: {
     sourcemap: false,
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8000', // Your backend server
+        changeOrigin: true,
+        secure: false,
+      },
+      '/images': {
+        target: 'http://localhost:8000', // Your backend server
+        changeOrigin: true,
+        secure: false,
+      },
+      '/static': {
+        target: 'http://localhost:8000', // Your backend server
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 });

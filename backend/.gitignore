@@ -39,3 +39,8 @@ htmlcov/
 
 # Pyre type checker
 .pyre/
+
+# Environment variables
+.env
+.env.local
+.env.production

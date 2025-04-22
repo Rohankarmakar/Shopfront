@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Row, Col, Image, ListGroup, Button, Card } from 'react-bootstrap';
+import axios from 'axios';
 
 import Rating from '../components/Rating';
-import products from '../products';
 
 const ProductScreen = ({ match }) => {
   const { id } = useParams();
   const productId = id || match.params.id;
-  const product = products.find((p) => p._id == productId);
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const { data } = await axios.get(`/api/products/${productId}`);
+        setProduct(data);
+      } catch (error) {
+        console.error('Error fetching product:', error);
+      }
+    };
+
+    fetchProduct();
+  }, [productId]);
 
   return (
     <div>
@@ -37,7 +50,7 @@ const ProductScreen = ({ match }) => {
         </Col>
         <Col md={3}>
           <Card>
-            <ListGroup >
+            <ListGroup>
               <ListGroup.Item>
                 <Row>
                   <Col>Price:</Col>
@@ -62,7 +75,7 @@ const ProductScreen = ({ match }) => {
                   type="button"
                   disabled={product.countInStock === 0}
                 >
-                  Add to Cart <i class="fa-solid fa-cart-plus"></i>
+                  Add to Cart <i className="fa-solid fa-cart-plus"></i>
                 </Button>
               </ListGroup.Item>
             </ListGroup>

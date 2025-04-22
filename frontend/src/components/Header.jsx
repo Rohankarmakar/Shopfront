@@ -18,11 +18,11 @@ const Header = () => {
               </Nav.Link>
               <Nav.Link href="#products">Products</Nav.Link>
               <Nav.Link as={Link} to="/cart">
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i className="fa-solid fa-cart-shopping"></i>
                 Cart
               </Nav.Link>
               <Nav.Link as={Link} to="/login">
-                <i class="fa-solid fa-user"></i>Login
+                <i className="fa-solid fa-user"></i>Login
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
